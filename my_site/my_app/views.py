@@ -43,5 +43,5 @@ def post_view(request, post):
 def num_post_view(request, num_post):
     list_post = list(MyPostName.keys())  # 'activities','projects','news'
     blogpost = list_post[num_post]
-    #webpage = reverse('Blog-Post', args=['blogpost'])
-    return HttpResponseRedirect(blogpost)
+    webpage = reverse('post-page', args=[blogpost])
+    return HttpResponseRedirect(webpage)

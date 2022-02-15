@@ -7,6 +7,6 @@ urlpatterns = [
     path('about/',views.about),
     path('blog/cat/<str:blogcat>',views.blog),
     path('blog/post/<int:num1>/<int:num2>',views.Blog_numpost),
-    path('blog/<str:post>', views.post_view),
-    path('blog/<int:num_post>',views.num_post_view),
+    path('blog/<int:num_post>', views.num_post_view),
+    path('blog/<str:post>', views.post_view, name='post-page'),
 ]
