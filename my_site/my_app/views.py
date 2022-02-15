@@ -22,7 +22,7 @@ MyPostName ={
 }
 # Create your views here.
 def index(request):
-    return HttpResponse(MyPages['index'])  # template html
+    return render(request,'my_app/index.html')  # template .html
 
 def about(request):
     return HttpResponse(MyPages['about'])
