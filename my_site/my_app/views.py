@@ -45,3 +45,10 @@ def num_post_view(request, num_post):
     blogpost = list_post[num_post]
     webpage = reverse('post-page', args=[blogpost])
     return HttpResponseRedirect(webpage)
+
+def variable_view(request):
+    my_var = {'var1':'simple passing','var2':'pass variable',
+              'some_list':[1,3,4],'some_dic':{'inside_key':'inside_value'}
+    
+    }
+    return render(request,'my_app/variable.html',context=my_var)

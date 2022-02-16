@@ -9,4 +9,5 @@ urlpatterns = [
     path('blog/post/<int:num1>/<int:num2>',views.Blog_numpost),
     path('blog/<int:num_post>', views.num_post_view),
     path('blog/<str:post>', views.post_view, name='post-page'),
+    path('variable/',views.variable_view),
 ]
